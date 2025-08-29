@@ -2,46 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe website</title>
-    <link rel="stylesheet" href="assets/css/Styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="assets/css/Styles.css" />
 </head>
 
-<header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>🍴 What Whould You Like to Eat...?</h1>
+            <div class="controls">
+                <div class="search-group">
+                    <input id="searchInput" type="text" placeholder="Search meals by name…" />
+                    <button id="searchBtn">Search</button>
+                </div>
+                <button id="randomBtn" class="btn-primary">Discover a Meal</button>
+                <select id="categorySelect">
+                    <option value="">All Categories</option>
+                </select>
+                <select id="areaSelect">
+                    <option value="">All Areas</option>
+                </select>
+                <div class="search-group">
+                    <input id="ingredientInput" type="text" placeholder="Search by ingredient…" />
+                    <button id="ingredientBtn">Find</button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<main>
-    <section id="home">
-        <h2>Home</h2>
-        <p>This Website allows you to search for recipes and retrieve details such as ingredients,
-            instructions, and meal images.</p>
-    </section>
+    <main class="container">
+        <section id="mealList" class="meal-grid">
+            
+        </section>
+    </main>
 
-    <section>
+    
+    <div id="mealModal" class="modal hidden">
+        <div class="modal-content">
+            <button id="modalClose" class="modal-close">&times;</button>
+            <div id="mealDetails">
+                
+            </div>
+        </div>
+    </div>
 
-    </section>
-
-    <aside>
-    </aside>
-</main>
-
-<footer>
-    <p> Food Recipe website</p>
-</footer>
-</body>
-
-</html>
+    <footer class="site-footer">
+        <p>&copy; © 2025 Recipes App — Powered by TheMealDB API</p>
+    </footer>
 
 
+    <script src="assets/js/apps.js"></script>
 </body>
 
 </html>
